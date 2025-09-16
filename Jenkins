@@ -1,0 +1,55 @@
+pipeline {
+    agent any
+
+    environment {
+        VENV_DIR = ".venv"
+    }
+    stages{  
+        stage('Checkout Code') {
+            steps {
+                git branch: 'master', url: 'https://github.com/haritha7592/PythonPytestAmazon.git'
+            }
+        }
+    
+        stage('Cleanup Workspace') {
+            steps {
+                cleanWs()
+            }
+        }
+
+        stage('Setup Python VirtualEnv') {
+            steps {
+                bat '''
+                    python -m venv .venv
+                    call .venv\\Scripts\\activate
+                    pip install --upgrade pip
+                    pip install -r requirements.txt
+                '''
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                bat '''
+                    call .venv\\Scripts\\activate
+                    pytest --junitxml=reports\\results.xml --html=report.html --self-contained-html
+                '''
+            }
+        }
+
+        stage('Publish Reports') {
+            steps {
+                junit 'reports\\results.xml'
+            }
+        }
+    }
+    post {
+        always {
+            bat '''
+                call .venv\\Scripts\\activate
+                pytest --junitxml=reports\\results.xml --html=report.html --self-contained-html
+            '''
+            archiveArtifacts artifacts: '**/report.html', fingerprint: true
+        }
+    }
+}
