@@ -1,0 +1,12 @@
+<testsuite name="login.Login to Indee Demo Site" tests="1" errors="0" failures="0" skipped="0" time="10.721034" timestamp="2025-09-07T09:41:24.934640" hostname="MohanPerichetla"><testcase classname="login.Login to Indee Demo Site" name="User logs in with valid PIN" status="passed" time="10.721034"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: User logs in with valid PIN
+    Given user launch the Indee demo site ... passed in 5.393s
+    When user login with the valid PIN ... passed in 5.283s
+    Then user should be on the All Titles screen ... passed in 0.045s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>
