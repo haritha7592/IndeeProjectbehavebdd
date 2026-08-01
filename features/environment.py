@@ -9,7 +9,7 @@ log = LogGen.get_logger("Environment")
 
 def before_all(context):
     log.info("Execution started")
-        context.driver = BrowserManager().get_driver()
+    context.driver = BrowserManager().get_driver()
 
     log.info("Browser launched")
 
