@@ -23,7 +23,13 @@ class Screenshot:
 
 # ss = Screenshot(driver)
 # <<<<<<< HEAD
+<<<<<<< HEAD
 # # ss.take_screenshot("screenshot")
 # =======
 # # ss.take_screenshot("screenshot")
+=======
+# ss.take_screenshot("screenshot")
+# =======
+# ss.take_screenshot("screenshot")
+>>>>>>> 445da76ec7f99f1c05ec26d94ab153bef57bf981
 # >>>>>>> b4fec5f24002fc095c1f7f04118be23f591b1319
