@@ -28,12 +28,14 @@ class VideoPage(BasePage):
          """
         self.click((By.ID, "detailsSection"))
         time.sleep(5)  # assignment requires explicit wait
-        print("✅ Switched to Details tab")
+        print("Switched to Details tab")
+        # print("✅ Switched to Details tab")
 
     def goto_videos_tab(self):
         """ Click the 'Videos' tab to switch back to the video list. """
         self.click((By.ID, "videosSection"))
-        print("✅ Switched back to Videos tab")
+        # print("✅ Switched back to Videos tab")
+        print("Switched back to Videos tab")
 
     def play_video(self):
         """ Wait for the play button to be clickable, then click it to start video playback. """
@@ -41,7 +43,8 @@ class VideoPage(BasePage):
             EC.element_to_be_clickable((By.XPATH, "//button[@class='icon-width-gen wds-cursor-pointer']"))
         )
         play_btn.click()
-        print("▶️ Video started playing")
+        # print("▶️ Video started playing")
+        print("Video started playing")
 
     def wait_and_pause(self, seconds=10, hold_pause_seconds=5):
         """ Wait until video plays for 'seconds', then pause and hold for 'hold_pause_seconds'.
@@ -62,17 +65,19 @@ class VideoPage(BasePage):
 
         # Pause at N seconds
         self.js("arguments[0].pause();", video)
-        print(f"⏸ Paused at ~{seconds} seconds of video playback")
+        print(f"Paused at ~{seconds} seconds of video playback")
 
         # Keep paused for hold_pause_seconds
         time.sleep(hold_pause_seconds)
-        print(f"⏳ Stayed paused for {hold_pause_seconds} seconds")
+        print(f"Stayed paused for {hold_pause_seconds} seconds")
+        # print(f"⏳ Stayed paused for {hold_pause_seconds} seconds")
 
     def continue_watching(self):
         """ Resume video playback by using JS to call play().    """
         video = self.find(self.PLAYER)
         self.js("arguments[0].play();", video)
-        print("▶️ Resumed playback via JS after 5sces")
+        print("Resumed playback via JS after 5sces")
+        # print("▶️ Resumed playback via JS after 5sces")
         # time.sleep(3) # removing this wait doesn't affect the run,just for a pretty demo
 
     def set_volume_percent(self, pct):
@@ -82,12 +87,13 @@ class VideoPage(BasePage):
         video = self.find(self.PLAYER)
         try:
             self.js("arguments[0].volume = arguments[1];", video, pct / 100)
-            print(f"🔊 Volume set to {pct}%")
+            print(f"Volume set to {pct}%")
+            # print(f"🔊 Volume set to {pct}%")
             # Hover over volume button to visually confirm change
             volume_btn = self.wait.until(
             EC.presence_of_element_located((By.XPATH, "//div[contains(@class,'jw-icon-volume')]")))
             self.actions.move_to_element(volume_btn).pause(2).perform()
-            print("🖱 Hovered over volume button to verify change")
+            print("Hovered over volume button to verify change")
         except Exception as e:
             print(f'Setting volume failed: {e}')
 
@@ -104,7 +110,8 @@ class VideoPage(BasePage):
             EC.element_to_be_clickable((By.XPATH, f"//button[contains(text(),'{label}')]"))
         )
         res.click()
-        print(f"📺 Resolution switched to {label}")
+        print(f"Resolution switched to {label}")
+        # print(f"📺 Resolution switched to {label}")
         # time.sleep(2)  # removing this wait doesn't affect the run,just for a pretty demo
 
     def change_resolution_720p(self, label):
@@ -120,7 +127,7 @@ class VideoPage(BasePage):
             EC.element_to_be_clickable((By.XPATH, f"//button[contains(text(),'{label}')]"))
         )
         res.click()
-        print(f"📺 Resolution switched to {label}")
+        print(f"Resolution switched to {label}")
         self.actions.move_to_element(settings_btn).pause(2).perform()
         self.js("arguments[0].click();", settings_btn)
         # time.sleep(1) #  removing this wait doesn't affect the run,just for a pretty demo
@@ -130,10 +137,10 @@ class VideoPage(BasePage):
         self.hover_on_video()
         video = self.find(self.PLAYER)
         self.js("arguments[0].pause();", video)
-        print("⏸ Video paused before exit")
+        print("Video paused before exit")
         time.sleep(1) #  removing this wait doesn't affect the run,just for a pretty demo
 
         self.driver.switch_to.default_content()
         self.driver.back()
-        print("⬅️ Navigated back to All Titles")
+        print("Navigated back to All Titles")        # print("⬅️ Navigated back to All Titles")
         time.sleep(1) #  removing this wait doesn't affect the run,just for a pretty demo
