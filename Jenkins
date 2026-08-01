@@ -38,7 +38,7 @@ pipeline {
 
         stage('Archive Allure Results') {
             steps {
-                archiveArtifacts artifacts: 'allure-results/**', allowEmptyArchive: true
+                archiveArtifacts artifacts: 'reports/allure-results/**', allowEmptyArchive: true
             }
         }
 
@@ -53,9 +53,6 @@ pipeline {
 
         always {
             echo 'Pipeline execution completed.'
-
-            archiveArtifacts artifacts: 'allure-results/**', allowEmptyArchive: true
-            archiveArtifacts artifacts: 'reports/screenshots/**', allowEmptyArchive: true
         }
 
         success {
