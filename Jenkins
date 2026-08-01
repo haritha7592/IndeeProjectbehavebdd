@@ -29,7 +29,7 @@ pipeline {
                 bat '''
                     chcp 65001
                     call %VENV_DIR%\\Scripts\\activate
-                    behave behave --tags=-@skip_jenkins -f allure_behave.formatter:AllureFormatter -o allure-results
+                    behave --tags=-@skip_jenkins -f allure_behave.formatter:AllureFormatter -o allure-results
                 '''
             }
         }
