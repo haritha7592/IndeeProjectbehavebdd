@@ -9,11 +9,7 @@ log = LogGen.get_logger("Environment")
 
 def before_all(context):
     log.info("Execution started")
-
-def before_scenario(context, scenario):
-    log.info(f"Starting Scenario: {scenario.name}")
-
-    context.driver = BrowserManager().get_driver()
+        context.driver = BrowserManager().get_driver()
 
     log.info("Browser launched")
 
@@ -40,6 +36,36 @@ def before_scenario(context, scenario):
     context.home_page = HomePage(context.driver)
     context.video_page = VideoPage(context.driver)
 
+def before_scenario(context, scenario):
+    log.info(f"Starting Scenario: {scenario.name}")
+
+    # context.driver = BrowserManager().get_driver()
+
+    # log.info("Browser launched")
+
+    # context.driver.maximize_window()
+
+    # context.login_page = LoginPage(context.driver)
+
+    # log.info("Loading login page")
+    # context.login_page.load_login_page()
+
+    # log.info(f"Current URL: {context.driver.current_url}")
+    # log.info(f"Title: {context.driver.title}")
+
+    # context.driver.save_screenshot("page_loaded.png")
+
+    # log.info("Entering PIN")
+    # context.login_page.enter_pin()
+
+    # log.info("Submitting")
+    # context.login_page.submit()
+
+    # log.info("Login successful")
+
+    # context.home_page = HomePage(context.driver)
+    # context.video_page = VideoPage(context.driver)
+
     # log.info(f"starting Scenario : {scenario.name}")
     # context.driver = BrowserManager().get_driver()
     # context.driver.maximize_window()
@@ -61,14 +87,19 @@ def after_step(context, step):
 def after_scenario(context, scenario):
     log.info(f"Finished Scenario : {scenario.name}")
 
+    # try:
+    #     context.driver.quit()
+    # except Exception as e:
+    #     # print(e)
+    #     log.exception(e)
+
+def after_all(context):
+    log.info(f"Execution Finished")
     try:
         context.driver.quit()
     except Exception as e:
         # print(e)
         log.exception(e)
-
-def after_all(context):
-    log.info(f"Execution Finished")
 
 
 
