@@ -1,7 +1,7 @@
 import os
 from datetime import datetime
 
-from webdriver_manager.core import driver
+# from webdriver_manager.core import driver
 
 from utils.logger import LogGen
 
@@ -21,5 +21,5 @@ class Screenshot:
         log.info(f'Screenshot saved to {file_path}')
         return file_path
 
-ss = Screenshot(driver)
-ss.take_screenshot("screenshot")
+# ss = Screenshot(driver)
+# ss.take_screenshot("screenshot")
