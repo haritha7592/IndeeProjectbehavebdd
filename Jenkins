@@ -5,10 +5,11 @@ pipeline {
         VENV_DIR = ".venv"
     }
 
+    stages {
 
         stage('Checkout Code') {
             steps {
-                echo 'Source code has been checked out successfully.'
+                checkout scm
             }
         }
 
@@ -23,7 +24,7 @@ pipeline {
             }
         }
 
-        stage('Run Tests') {
+        stage('Run Behave Tests') {
             steps {
                 bat '''
                     call %VENV_DIR%\\Scripts\\activate
@@ -32,28 +33,26 @@ pipeline {
             }
         }
 
-        stage('Publish Test Results') {
+        stage('Archive Allure Results') {
             steps {
-                junit 'reports/results.xml'
+                archiveArtifacts artifacts: 'allure-results/**', allowEmptyArchive: true
             }
         }
 
-        stage('Archive HTML Report') {
+        stage('Archive Screenshots') {
             steps {
-                aarchiveArtifacts artifacts: 'allure-results/**', fingerprint: true
+                archiveArtifacts artifacts: 'reports/screenshots/**', allowEmptyArchive: true
             }
         }
     }
 
     post {
+
         always {
             echo 'Pipeline execution completed.'
 
-            archiveArtifacts artifacts: 'report.html', fingerprint: true, allowEmptyArchive: true
-
-            junit allowEmptyResults: true, testResults: 'reports/results.xml'
-
-            cleanWs()
+            archiveArtifacts artifacts: 'allure-results/**', allowEmptyArchive: true
+            archiveArtifacts artifacts: 'reports/screenshots/**', allowEmptyArchive: true
         }
 
         success {
@@ -61,7 +60,7 @@ pipeline {
         }
 
         failure {
-            echo 'Build failed. Please check the console output.'
+            echo 'Build failed.'
         }
     }
 }
