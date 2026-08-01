@@ -3,10 +3,15 @@ import os
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+from utils.logger import LogGen
+from utils.screenshot import Screenshot
+
+
 class BasePage:
     def __init__(self, driver, timeout=20):
         self.driver = driver
         self.wait = WebDriverWait(driver, timeout)
+        self.log = LogGen.get_logger(self.__class__.__name__)
 
     def click(self, locator):
         """ Waits for the element to be clickable, then clicks it.
@@ -39,6 +44,7 @@ class BasePage:
         """ Saves a screenshot of the current browser window to the reports/screenshots directory.
         Args:
             name (str): The filename for the saved screenshot. """
-        path = os.path.join("reports/screenshots", name)
-        self.driver.save_screenshot(path)
-        print(f"[INFO] Screenshot saved: {path}")
+        return Screenshot(self.driver).take_screenshot(name)
+        # path = os.path.join("reports/screenshots", name)
+        # self.driver.save_screenshot(path)
+        # print(f"[INFO] Screenshot saved: {path}")

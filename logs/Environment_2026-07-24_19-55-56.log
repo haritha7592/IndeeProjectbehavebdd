@@ -1,0 +1,13 @@
+2026-07-24 19:55:56,795 - Environment - INFO - Execution started
+2026-07-24 19:55:56,799 - Environment - INFO - starting Scenario : User logs in with valid PIN
+2026-07-24 19:56:04,171 - Environment - INFO - Executing Step : user launch the Indee demo site
+2026-07-24 19:56:06,604 - Environment - INFO - Executing Step : user login with the valid PIN
+2026-07-24 19:56:12,560 - Environment - INFO - Executing Step : user should be on the All Titles screen
+2026-07-24 19:56:19,900 - Environment - INFO - Finished Scenario : User logs in with valid PIN
+2026-07-24 19:56:26,631 - Environment - INFO - starting Scenario : Automate Indee video playback and controls
+2026-07-24 19:56:31,850 - Environment - INFO - Executing Step : user navigate to the Test Automation Project
+2026-07-24 19:56:52,313 - Environment - INFO - Finished Scenario : Automate Indee video playback and controls
+2026-07-24 19:56:54,919 - Environment - INFO - starting Scenario : User logs out successfully
+2026-07-24 19:56:59,967 - Environment - INFO - Executing Step : user am on the All Titles screen
+2026-07-24 19:57:00,119 - Environment - INFO - Finished Scenario : User logs out successfully
+2026-07-24 19:57:06,494 - Environment - INFO - Execution Finished

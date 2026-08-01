@@ -1,0 +1,13 @@
+2026-07-24 19:46:26,768 - builtins - INFO - Execution started
+2026-07-24 19:46:26,806 - builtins - INFO - starting Scenario : User logs in with valid PIN
+2026-07-24 19:46:36,491 - builtins - INFO - Executing Step : user launch the Indee demo site
+2026-07-24 19:46:39,022 - builtins - INFO - Executing Step : user login with the valid PIN
+2026-07-24 19:46:47,349 - builtins - INFO - Executing Step : user should be on the All Titles screen
+2026-07-24 19:46:58,400 - builtins - INFO - Finished Scenario : User logs in with valid PIN
+2026-07-24 19:47:08,697 - builtins - INFO - starting Scenario : Automate Indee video playback and controls
+2026-07-24 19:47:14,298 - builtins - INFO - Executing Step : user navigate to the Test Automation Project
+2026-07-24 19:47:34,923 - builtins - INFO - Finished Scenario : Automate Indee video playback and controls
+2026-07-24 19:47:37,471 - builtins - INFO - starting Scenario : User logs out successfully
+2026-07-24 19:47:42,970 - builtins - INFO - Executing Step : user am on the All Titles screen
+2026-07-24 19:47:43,118 - builtins - INFO - Finished Scenario : User logs out successfully
+2026-07-24 19:47:49,630 - builtins - INFO - Execution Finished
