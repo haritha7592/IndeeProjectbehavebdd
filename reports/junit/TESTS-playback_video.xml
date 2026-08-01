@@ -1,18 +1,18 @@
-<testsuite name="playback_video.Video Playback and Controls" tests="1" errors="0" failures="0" skipped="0" time="49.383388" timestamp="2026-07-24T21:06:21.606786" hostname="MohanPerichetla"><testcase classname="playback_video.Video Playback and Controls" name="Automate Indee video playback and controls" status="passed" time="49.383388"><system-out>
+<testsuite name="playback_video.Video Playback and Controls" tests="1" errors="0" failures="0" skipped="0" time="71.601757" timestamp="2026-08-01T16:52:04.500411" hostname="MohanPerichetla"><testcase classname="playback_video.Video Playback and Controls" name="Automate Indee video playback and controls" status="passed" time="71.601757"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario: Automate Indee video playback and controls
-    When user navigate to the Test Automation Project ... passed in 6.278s
-    And user switch to the Details tab and wait ... passed in 9.764s
-    And user switch back to the Videos tab ... passed in 0.105s
-    And user play the video ... passed in 0.674s
-    And user wait 10 seconds and pause the video ... passed in 23.929s
-    And user resume using Continue Watching ... passed in 0.044s
-    And user set the volume to 50 percent ... passed in 2.444s
-    And user change the resolution to 480p ... passed in 0.564s
-    And user change the resolution to 720p ... passed in 3.019s
-    And user pause the video and exit the project ... passed in 2.498s
-    Then user should return to the All Titles screen ... passed in 0.064s
+    When user navigate to the Test Automation Project ... passed in 7.855s
+    And user switch to the Details tab and wait ... passed in 10.373s
+    And user switch back to the Videos tab ... passed in 0.954s
+    And user play the video ... passed in 1.298s
+    And user wait 10 seconds and pause the video ... passed in 30.934s
+    And user resume using Continue Watching ... passed in 0.304s
+    And user set the volume to 50 percent ... passed in 9.691s
+    And user change the resolution to 480p ... passed in 2.131s
+    And user change the resolution to 720p ... passed in 4.250s
+    And user pause the video and exit the project ... passed in 3.607s
+    Then user should return to the All Titles screen ... passed in 0.204s
 
 @scenario.end
 --------------------------------------------------------------------------------

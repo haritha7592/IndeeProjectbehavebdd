@@ -1,6 +1,6 @@
-<testsuite name="signout.Logout from Indee Demo Site" tests="1" errors="0" failures="1" skipped="0" time="0.402622" timestamp="2026-07-24T21:06:43.190157" hostname="MohanPerichetla"><testcase classname="signout.Logout from Indee Demo Site" name="User logs out successfully" status="failed" time="0.402622"><failure type="AssertionError" message="">
+<testsuite name="signout.Logout from Indee Demo Site" tests="1" errors="0" failures="1" skipped="0" time="0.502322" timestamp="2026-08-01T16:52:33.082007" hostname="MohanPerichetla"><testcase classname="signout.Logout from Indee Demo Site" name="User logs out successfully" status="failed" time="0.502322"><failure type="AssertionError" message="">
 <![CDATA[
-Failing step: Given user am on the All Titles screen ... failed in 0.403s
+Failing step: Given user am on the All Titles screen ... failed in 0.502s
 Location: features/signout.feature:4
 Traceback (most recent call last):
   File "C:\Users\mperi\PycharmProjects\IndeeProject\.venv\Lib\site-packages\behave\model.py", line 1329, in run
@@ -16,12 +16,12 @@ AssertionError
 
 Captured logging:
 INFO:Environment:Executing Step : user am on the All Titles screen
-INFO:utils.screenshot:Screenshot saved to reports/screenshots\user_am_on_the_All_Titles_screen_2026-07-24_21-06-35.png]]>
+INFO:utils.screenshot:Screenshot saved to reports/screenshots\user_am_on_the_All_Titles_screen_2026-08-01_16-52-24.png]]>
 </failure><system-out>
 <![CDATA[
 @scenario.begin
   Scenario: User logs out successfully
-    Given user am on the All Titles screen ... failed in 0.403s
+    Given user am on the All Titles screen ... failed in 0.502s
     When user logout ... skipped in 0.000s
     Then user should return to the login page ... skipped in 0.000s
 

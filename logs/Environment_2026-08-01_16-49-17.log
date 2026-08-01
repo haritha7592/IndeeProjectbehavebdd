@@ -1,0 +1,23 @@
+2026-08-01 16:49:17,056 - Environment - INFO - Execution started
+2026-08-01 16:49:17,129 - Environment - INFO - starting Scenario : User logs in with valid PIN
+2026-08-01 16:49:57,598 - Environment - INFO - Executing Step : user launch the Indee demo site
+2026-08-01 16:49:59,712 - Environment - INFO - Executing Step : user login with the valid PIN
+2026-08-01 16:50:07,003 - Environment - INFO - Executing Step : user should be on the All Titles screen
+2026-08-01 16:50:17,421 - Environment - INFO - Finished Scenario : User logs in with valid PIN
+2026-08-01 16:50:25,590 - Environment - INFO - starting Scenario : Automate Indee video playback and controls
+2026-08-01 16:50:44,809 - Environment - INFO - Executing Step : user navigate to the Test Automation Project
+2026-08-01 16:50:52,665 - Environment - INFO - Executing Step : user switch to the Details tab and wait
+2026-08-01 16:51:03,056 - Environment - INFO - Executing Step : user switch back to the Videos tab
+2026-08-01 16:51:04,048 - Environment - INFO - Executing Step : user play the video
+2026-08-01 16:51:05,347 - Environment - INFO - Executing Step : user wait 10 seconds and pause the video
+2026-08-01 16:51:36,299 - Environment - INFO - Executing Step : user resume using Continue Watching
+2026-08-01 16:51:36,738 - Environment - INFO - Executing Step : user set the volume to 50 percent
+2026-08-01 16:51:46,433 - Environment - INFO - Executing Step : user change the resolution to 480p
+2026-08-01 16:51:48,569 - Environment - INFO - Executing Step : user change the resolution to 720p
+2026-08-01 16:51:52,822 - Environment - INFO - Executing Step : user pause the video and exit the project
+2026-08-01 16:51:56,431 - Environment - INFO - Executing Step : user should return to the All Titles screen
+2026-08-01 16:51:56,638 - Environment - INFO - Finished Scenario : Automate Indee video playback and controls
+2026-08-01 16:52:04,528 - Environment - INFO - starting Scenario : User logs out successfully
+2026-08-01 16:52:24,493 - Environment - INFO - Executing Step : user am on the All Titles screen
+2026-08-01 16:52:26,103 - Environment - INFO - Finished Scenario : User logs out successfully
+2026-08-01 16:52:33,087 - Environment - INFO - Execution Finished
