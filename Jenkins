@@ -28,7 +28,7 @@ pipeline {
             steps {
                 bat '''
                     call %VENV_DIR%\\Scripts\\activate
-                    behave -f allure_behave.formatter:AllureFormatter -o allure-results
+                    behave
                 '''
             }
         }
