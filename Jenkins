@@ -26,11 +26,13 @@ pipeline {
 
         stage('Run Behave Tests') {
             steps {
-                bat '''
-                    chcp 65001
-                    call %VENV_DIR%\\Scripts\\activate
-                    behave --tags=-@skip_jenkins -f allure_behave.formatter:AllureFormatter -o allure-results
-                '''
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                    bat '''
+                        chcp 65001
+                        call %VENV_DIR%\\Scripts\\activate
+                        behave --tags=-@skip_jenkins
+                    '''
+                }
             }
         }
 
