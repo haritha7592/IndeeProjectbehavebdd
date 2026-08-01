@@ -27,6 +27,7 @@ pipeline {
         stage('Run Behave Tests') {
             steps {
                 bat '''
+                    chcp 65001
                     call %VENV_DIR%\\Scripts\\activate
                     behave
                 '''
