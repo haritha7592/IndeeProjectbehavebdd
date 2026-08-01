@@ -22,8 +22,8 @@ class Screenshot:
         return file_path
 
 # ss = Screenshot(driver)
-<<<<<<< HEAD
-# ss.take_screenshot("screenshot")
-=======
-# ss.take_screenshot("screenshot")
->>>>>>> b4fec5f24002fc095c1f7f04118be23f591b1319
+# <<<<<<< HEAD
+# # ss.take_screenshot("screenshot")
+# =======
+# # ss.take_screenshot("screenshot")
+# >>>>>>> b4fec5f24002fc095c1f7f04118be23f591b1319
