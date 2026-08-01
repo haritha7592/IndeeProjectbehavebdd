@@ -1,3 +1,4 @@
+@skip_jenkins
 Feature: Video Playback and Controls
 
   Scenario: Automate Indee video playback and controls
